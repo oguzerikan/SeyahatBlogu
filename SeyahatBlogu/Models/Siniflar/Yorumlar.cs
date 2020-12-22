@@ -13,6 +13,6 @@ namespace SeyahatBlogu.Models.Siniflar
         public string KullaniciAdi { get; set; }
         public string Mail { get; set; }
         public string Yorum { get; set; }
-        public int BLOGID { get; set; }
+        public Blog Blog { get; set; }
     }
 }
