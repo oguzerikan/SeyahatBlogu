@@ -160,6 +160,7 @@
     <Content Include="web2\css\style.css" />
     <Content Include="web2\images\avatar.png" />
     <Content Include="web2\images\icon3.png" />
+    <Content Include="web2\images\katmandu.jpg" />
     <Content Include="web2\images\logo.jpg" />
     <Content Include="web2\images\man.jpg" />
     <Content Include="web2\images\more.png" />

@@ -1,4 +1,7 @@
-﻿
+﻿@using SeyahatBlogu.Models.Siniflar
+@model List<Blog>
+
+
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -31,34 +34,34 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <script type="text/javascript" src="/web2/js/easing.js"></script>
     <!--/script-->
     <script type="text/javascript">
-			jQuery(document).ready(function($) {
-				$(".scroll").click(function(event){
-					event.preventDefault();
-					$('html,body').animate({scrollTop:$(this.hash).offset().top},900);
-				});
-			});
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 900);
+            });
+        });
     </script>
     <!---->
 
 </head>
 
-  
-    <div class="single">
-        <div class="container">
-            <div class="col-md-8 single-main">                
-                <div class="single-grid">
-                    <h2><a href="#" style="text-decoration:none;">Zanzibar Gezi Rehberi: Güneşin En Güzel Battığı Yer</a></h2>
-                    <img src="~/web2/images/zanzibar.jpg" />
+
+<div class="single">
+    <div class="container">
+        <div class="col-md-8 single-main">
+            @foreach (var item in Model)
+            {
+                <div class="single-grid" style="margin-bottom:70px;">
+
+                    <span style="background-color:teal; color:azure; padding:3px 6px; border-radius:5px; font-size:small;">@item.Tarih.ToShortDateString()</span>
+                    <h2 style="padding-top:15px;"><a href="#" style="text-decoration:none;">@item.Baslik</a></h2>
+                    <img src="@item.BlogImage" style="width:100%; height:300px; object-fit:cover;"/>
                     <p>
-                        Zanzibar adası tek başına bir ülke gibi takılsa da resmî olarak Tanzanya'ya bağlı bir ada. 1963'te İngiltere sömürgesinden çıkan ZANzibar, 1964'te TANganyika ile birleşme kararı alıyor ve Tan-Zan-ia ismi doğuyor. Zanzibar ve Pemba olmak üzere 2 büyük adadan oluşan bu özerk bölgenin kendine ait bir meclisi, başkanı ve bayrağı var fakat elektriği hala anakaradan alıyor. Tanzanya'da çoğunluk Hristiyanlardan oluşmasına rağmen Zanzibar'da halk tamamen Müslüman. Uzun yıllar Umman sultanı tarafından yönetilen adadaki Arap etkisine şaşırmamak lazım.
+                        @item.Aciklama
                     </p>
-                    <p>
-                        Zanzibar adası için "Afrika'daki pek çok bölgeye nazaran oldukça gelişmiş, bereket ve bolluk içinde." diyebiliriz. Sebebi ise yüzyıllar boyunca önemli bir ticaret merkezi olması. Bu durum aynı zamanda insanlığın yüz karası bir tarihe ev sahipliği yapmasına neden oluyor çünkü adayı himayesi altına alan Umman Sultanı adanın kalkınması adına kölelik ticaretini başlatıp Doğu Afrika'daki kabilelerden toplanan insanların Arap Yarımadası ve Hindistan'a satılmasına önayak olmuş. Dünya üzerinde köleliğin en son yasaklandığı yer Zanzibar'dır. Onun yanı sıra, fil dişi ticareti de aynı dönemde teşvik edilip hayvan katliamlarının önü açılmış. Azıcık da olumlu yanlarından bahsedeyim; dünyanın en önemli baharat üreticilerinden birisi haline gelmesi de adanın gelişmesine önemli bir katkı sağlamış.
-                    </p>
-                    <p>
-                        Günümüzde ise Zanzibar, bölgenin en önemli turizm merkezi konumunda. Aynı zamanda baharat cenneti de olan Zanzibar, hindistan cevizi konusunda sayılı üreticilerden. Elbette bu durum politikasına da yansıyor. Anakara ile birleşme zamanında yapılan anlaşmaların yerine getirilmediği gerekçesi halkın büyük bir kısmını rahatsız ediyor ve kendi kendilerine yetecek imkanlara sahip olduklarını düşünüyorlar. İktidar partisi anakaraya bağlı kalmakta ısrar ededursun bağımsızlıktan yana olanların sayısı günden güne artmakta. Eğer gerçekleşirse Zanzibar, tarihinde bir ilki yaşayacak.
-                    </p>
+                    
                 </div>
+            }
 
                 <ul class="comment-list">
                     <h5 class="post-author_head">Written by <a href="#" title="Posts by admin" rel="author">admin</a></h5>
@@ -82,26 +85,26 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </div>
             </div>
 
-            <div class="col-md-4 side-content">
-                <div class="recent">
-                    <h3>SON YAZILAR</h3>
-                    <ul>
-                        <li><a href="#">Aliquam tincidunt mauris</a></li>
-                        <li><a href="#">Vestibulum auctor dapibus  lipsum</a></li>
-                        <li><a href="#">Nunc dignissim risus consecu</a></li>
-                        <li><a href="#">Cras ornare tristiqu</a></li>
-                    </ul>
-                </div>
-                <div class="comments">
-                    <h3>SON YORUMLAR</h3>
-                    <ul>
-                        <li><a href="#">Amada Doe </a> on <a href="#">Hello World!</a></li>
-                        <li><a href="#">Peter Doe </a> on <a href="#"> Photography</a></li>
-                        <li><a href="#">Steve Roberts  </a> on <a href="#">HTML5/CSS3</a></li>
-                    </ul>
-                </div>
-                <div class="clearfix"></div>
-                @*<div class="archives">
+        <div class="col-md-4 side-content">
+            <div class="recent">
+                <h3>SON YAZILAR</h3>
+                <ul>
+                    <li><a href="#">Aliquam tincidunt mauris</a></li>
+                    <li><a href="#">Vestibulum auctor dapibus  lipsum</a></li>
+                    <li><a href="#">Nunc dignissim risus consecu</a></li>
+                    <li><a href="#">Cras ornare tristiqu</a></li>
+                </ul>
+            </div>
+            <div class="comments">
+                <h3>SON YORUMLAR</h3>
+                <ul>
+                    <li><a href="#">Amada Doe </a> on <a href="#">Hello World!</a></li>
+                    <li><a href="#">Peter Doe </a> on <a href="#"> Photography</a></li>
+                    <li><a href="#">Steve Roberts  </a> on <a href="#">HTML5/CSS3</a></li>
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+            @*<div class="archives">
                     <h3>ARCHIVES</h3>
                     <ul>
                         <li><a href="#">October 2013</a></li>
@@ -119,15 +122,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <li><a href="#">Cras iaculis ultricies</a></li>
                     </ul>
                 </div>*@
-                <div class="clearfix"></div>
-            </div>
             <div class="clearfix"></div>
         </div>
+        <div class="clearfix"></div>
     </div>
-    @*</div>*@
-    <!---->
-    
+</div>
 
-
-
-
+@*</div>*@
+<!---->
