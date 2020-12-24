@@ -17,10 +17,12 @@ namespace SeyahatBlogu.Controllers
             return View(bloglar);
         }
 
+        BlogYorum by = new BlogYorum();
         public ActionResult BlogDetay(int id)
         {
-            var blogbul = c.Blogs.Where(x => x.ID == id).ToList();
-            return View(blogbul);
+            //var blogbul = c.Blogs.Where(x => x.ID == id).ToList();
+            by.Deger1 = c.Blogs.Where(x => x.ID == id).ToList();
+            return View(by);
         }
     }
 }

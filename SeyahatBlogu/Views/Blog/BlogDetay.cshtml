@@ -1,5 +1,4 @@
-﻿@using SeyahatBlogu.Models.Siniflar
-@model List<Blog>
+﻿@model SeyahatBlogu.Models.Siniflar.BlogYorum
 
 @{
     ViewBag.Title = "BlogDetay";
@@ -41,7 +40,7 @@
     <div class="container">
         <div class="col-md-8 single-main">
             <div class="single-grid">
-                @foreach (var item in Model)
+                @foreach (var item in Model.Deger1)
                 {
                     <span style="background-color:teal; color:azure; padding:3px 6px; border-radius:5px; font-size:small;">@item.Tarih.ToShortDateString()</span>
                     <h2 style="padding-top:15px;">@item.Baslik</h2>
