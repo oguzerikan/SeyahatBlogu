@@ -1,18 +1,10 @@
 ﻿@using SeyahatBlogu.Models.Siniflar
 @model List<Blog>
 
-
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "BlogDetay";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 
 <head>
     <title>Personal Blog a Blogging Category Flat Bootstarp  Responsive Website Template | Single :: w3layouts</title>
@@ -45,29 +37,44 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 </head>
 
-
 <div class="single">
     <div class="container">
         <div class="col-md-8 single-main">
-            @foreach (var item in Model)
-            {
-                <div class="single-grid" style="margin-bottom:70px;">
-
+            <div class="single-grid">
+                @foreach (var item in Model)
+                {
                     <span style="background-color:teal; color:azure; padding:3px 6px; border-radius:5px; font-size:small;">@item.Tarih.ToShortDateString()</span>
-                    <h2 style="padding-top:15px;"><a href="/Blog/BlogDetay/@item.ID" style="text-decoration:none;">@item.Baslik</a></h2>
-                    <img src="@item.BlogImage" style="width:100%; height:300px; object-fit:cover;"/>
+                    <h2 style="padding-top:15px;">@item.Baslik</h2>
+                    <img src="@item.BlogImage" style="width:100%; height:300px; object-fit:cover;" />
                     <p>
-                        @*@item.Aciklama.Length > 100 ? @item.Aciklama.Substring(0,100) :*@ @item.Aciklama;
+                        @item.Aciklama;
                     </p>
-                    
-                </div>
-            }
-                
+                }
             </div>
+            <ul class="comment-list">
+                <h5 class="post-author_head">Written by <a href="#" title="Posts by admin" rel="author">admin</a></h5>
+                <li>
+                    <img src="/web2/images/avatar.png" class="img-responsive" alt="">
+                    <div class="desc">
+                        <p>Kullanıcı: </p>
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+            </ul>
+            <div class="content-form">
+                <h3>Yorumunuzu Bırakın</h3>
+                <form>
+                    <input type="text" placeholder="Kullanıcı Adı" required />
+                    <input type="text" placeholder="Email" required />
+                    <textarea placeholder="Mesaj"></textarea>
+                    <input type="submit" value="Gönder" />
+                </form>
+            </div>
+        </div>
 
         <div class="col-md-4 side-content">
             <div class="recent">
-                <h3>SON YAZILAR</h3>
+                <h3>RECENT POSTS</h3>
                 <ul>
                     <li><a href="#">Aliquam tincidunt mauris</a></li>
                     <li><a href="#">Vestibulum auctor dapibus  lipsum</a></li>
@@ -76,7 +83,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </ul>
             </div>
             <div class="comments">
-                <h3>SON YORUMLAR</h3>
+                <h3>RECENT COMMENTS</h3>
                 <ul>
                     <li><a href="#">Amada Doe </a> on <a href="#">Hello World!</a></li>
                     <li><a href="#">Peter Doe </a> on <a href="#"> Photography</a></li>
@@ -84,29 +91,28 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </ul>
             </div>
             <div class="clearfix"></div>
-            @*<div class="archives">
-                    <h3>ARCHIVES</h3>
-                    <ul>
-                        <li><a href="#">October 2013</a></li>
-                        <li><a href="#">September 2013</a></li>
-                        <li><a href="#">August 2013</a></li>
-                        <li><a href="#">July 2013</a></li>
-                    </ul>
-                </div>
-                <div class="categories">
-                    <h3>CATEGORIES</h3>
-                    <ul>
-                        <li><a href="#">Vivamus vestibulum nulla</a></li>
-                        <li><a href="#">Integer vitae libero ac risus e</a></li>
-                        <li><a href="#">Vestibulum commo</a></li>
-                        <li><a href="#">Cras iaculis ultricies</a></li>
-                    </ul>
-                </div>*@
+            <div class="archives">
+                <h3>ARCHIVES</h3>
+                <ul>
+                    <li><a href="#">October 2013</a></li>
+                    <li><a href="#">September 2013</a></li>
+                    <li><a href="#">August 2013</a></li>
+                    <li><a href="#">July 2013</a></li>
+                </ul>
+            </div>
+            <div class="categories">
+                <h3>CATEGORIES</h3>
+                <ul>
+                    <li><a href="#">Vivamus vestibulum nulla</a></li>
+                    <li><a href="#">Integer vitae libero ac risus e</a></li>
+                    <li><a href="#">Vestibulum commo</a></li>
+                    <li><a href="#">Cras iaculis ultricies</a></li>
+                </ul>
+            </div>
             <div class="clearfix"></div>
         </div>
         <div class="clearfix"></div>
     </div>
 </div>
-
 @*</div>*@
 <!---->

@@ -163,11 +163,15 @@
     <Content Include="web2\images\katmandu.jpg" />
     <Content Include="web2\images\logo.jpg" />
     <Content Include="web2\images\man.jpg" />
+    <Content Include="web2\images\misir_blogu.jpg" />
     <Content Include="web2\images\more.png" />
     <Content Include="web2\images\post1.jpg" />
     <Content Include="web2\images\post2.jpg" />
     <Content Include="web2\images\post3.jpg" />
     <Content Include="web2\images\search.png" />
+    <Content Include="web2\images\sehit_cuma_muzesi.jpg" />
+    <Content Include="web2\images\sile_tarihi_yerler.jpg" />
+    <Content Include="web2\images\uc_gunde_stockholm.jpg" />
     <Content Include="web2\images\zanzibar.jpg" />
     <Content Include="web2\index.html" />
     <Content Include="web2\js\easing.js" />
@@ -240,6 +244,7 @@
     <Content Include="Views\Shared\_TestLayout.cshtml" />
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Views\Blog\Index.cshtml" />
+    <Content Include="Views\Blog\BlogDetay.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
