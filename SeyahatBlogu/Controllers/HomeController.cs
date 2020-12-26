@@ -11,8 +11,9 @@ namespace SeyahatBlogu.Controllers
     {
         Context c = new Context();
         public ActionResult Index()
-        {            
-            return View();
+        {
+            var degerler = c.Blogs.ToList();
+            return View(degerler);
         }
 
         public ActionResult About()
