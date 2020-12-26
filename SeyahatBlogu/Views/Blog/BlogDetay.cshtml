@@ -50,16 +50,20 @@
                     </p>
                 }
             </div>
-            <ul class="comment-list">
-                <h5 class="post-author_head">Written by <a href="#" title="Posts by admin" rel="author">admin</a></h5>
-                <li>
-                    <img src="/web2/images/avatar.png" class="img-responsive" alt="">
-                    <div class="desc">
-                        <p>Kullanıcı: </p>
-                    </div>
-                    <div class="clearfix"></div>
-                </li>
-            </ul>
+
+            @foreach (var item in Model.Deger2)
+            {
+                <ul class="comment-list">                    
+                    <li>
+                        <img src="/web2/images/avatar.png" class="img-responsive" alt="" style="float:left;">
+                        <div class="desc">
+                            <p><a href="#" class="post-author_head text-decoration-none" title="Posts by admin" rel="author">@item.KullaniciAdi:</a> @item.Yorum</p>
+                        </div>
+                        <div class="clearfix"></div>
+                    </li>
+                </ul>
+            }
+
             <div class="content-form">
                 <h3>Yorumunuzu Bırakın</h3>
                 <form>
