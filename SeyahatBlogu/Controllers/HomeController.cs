@@ -32,7 +32,9 @@ namespace SeyahatBlogu.Controllers
 
         public PartialViewResult Partial1()
         {
-            return PartialView();
+            var degerler = c.Blogs.OrderByDescending(x => x.ID).Take(2).ToList();
+            return PartialView(degerler);
         }
+        
     }
 }
