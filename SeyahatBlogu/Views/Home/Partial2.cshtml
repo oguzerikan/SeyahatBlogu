@@ -9,9 +9,9 @@
         </div>
         <div class="left-text">
 
-            <h4>@item.Baslik.Substring(0, 35)</h4>
+            <h4>@item.Baslik.Substring(0, item.Baslik.Substring(0, 35).LastIndexOf(" "))</h4>
             <span class="doller">@item.Tarih.ToString("d")</span>
-            <p>@item.Aciklama.Substring(0, 120)</p>
+            <p>@item.Aciklama.Substring(0, item.Aciklama.Substring(0, 120).LastIndexOf(" "))</p>
             <p><a href="/Blog/BlogDetay/@item.ID"><span class="read">Devamını Oku >></span></a></p>
         </div>
     </div>

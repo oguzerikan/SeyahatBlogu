@@ -267,9 +267,12 @@
     <Content Include="web\destinations.html" />
     <Content Include="web\images\about_banner.jpg" />
     <Content Include="web\images\arrows.png" />
+    <Content Include="web\images\basmane.jpg" />
+    <Content Include="web\images\budapeste.jpg" />
     <Content Include="web\images\but.png" />
     <Content Include="web\images\contact.png" />
     <Content Include="web\images\dest_banner.jpg" />
+    <Content Include="web\images\fethiyede_nerede_kalinir.jpg" />
     <Content Include="web\images\flight.png" />
     <Content Include="web\images\glass.png" />
     <Content Include="web\images\group.png" />
@@ -282,6 +285,7 @@
     <Content Include="web\images\key.png" />
     <Content Include="web\images\link1-bg.gif" />
     <Content Include="web\images\logo.png" />
+    <Content Include="web\images\londra_gezil_yerler.jpg" />
     <Content Include="web\images\pic.jpg" />
     <Content Include="web\images\pic1.jpg" />
     <Content Include="web\images\pic10.jpg" />
@@ -293,6 +297,7 @@
     <Content Include="web\images\pic7.jpg" />
     <Content Include="web\images\pic8.jpg" />
     <Content Include="web\images\pic9.jpg" />
+    <Content Include="web\images\seyahat_uygulamalari.jpg" />
     <Content Include="web\index.html" />
     <Content Include="web\js\jquery.min.js" />
     <Content Include="web\js\responsiveslides.min.js" />
@@ -353,6 +358,7 @@
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Home\Partial1.cshtml" />
     <Content Include="Views\Home\Partial2.cshtml" />
+    <Content Include="Views\Home\Partial3.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
