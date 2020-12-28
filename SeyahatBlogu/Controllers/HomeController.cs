@@ -54,5 +54,11 @@ namespace SeyahatBlogu.Controllers
             var degerler = c.Blogs.Take(3).ToList();
             return PartialView(degerler);
         }
+
+        public PartialViewResult Partial5()
+        {
+            var sagaltsutun = c.Blogs.OrderByDescending(x => x.ID).Take(3).ToList();
+            return PartialView(sagaltsutun);
+        }
     }
 }

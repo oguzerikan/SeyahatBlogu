@@ -8,7 +8,7 @@
         {
             <div class="bot-img">
                 <a href="/Blog/BlogDetay/@item.ID">
-                    <img src="@item.BlogImage" alt="" style="width:120px; height:90px; object-fit:cover;" />
+                    <img src="@item.BlogImage" alt="" style="width:120px; height:95px; object-fit:cover;" />
                 </a>
             </div>
             <div class="bot-desc">
@@ -18,26 +18,6 @@
         }
     </div>
     <div class="box1-left">
-        <div class="bot-img">
-            <img src="/web/images/pic9.jpg" alt="" />
-        </div>
-        <div class="bot-desc1">
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet </p>
-        </div>
-        <div class="clear"></div>
-        <div class="bot-img">
-            <img src="/web/images/pic10.jpg" alt="" />
-        </div>
-        <div class="bot-desc1">
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet </p>
-        </div>
-        <div class="clear"></div>
-        <div class="bot-img">
-            <img src="/web/images/pic3.jpg" alt="" />
-        </div>
-        <div class="bot-desc1">
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet </p>
-        </div>
-        <div class="clear"></div>
+        @Html.Action("Partial5","Home")     
     </div>
 </div>

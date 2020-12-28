@@ -1,0 +1,16 @@
+﻿@using SeyahatBlogu.Models.Siniflar
+@model List<Blog>
+
+@foreach (var item in Model)
+{
+    <div class="bot-img">
+        <a href="/Blog/BlogDetay/@item.ID">
+            <img src="@item.BlogImage" alt="" style="width:120px; height:95px; object-fit:cover;" />
+        </a>
+    </div>
+    <div class="bot-desc1">
+        <p>@item.Aciklama.Substring(0, item.Aciklama.Substring(0, 100).LastIndexOf(" ")) </p>
+    </div>
+    <div class="clear"></div>
+}
+
