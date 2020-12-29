@@ -13,11 +13,11 @@
     @Html.LabelFor(x => x.Tarih)
     @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
     <br />
-    @Html.LabelFor(x => x.Aciklama)
-    @Html.TextBoxFor(x => x.Aciklama, new { @class = "form-control" })
-    <br />
     @Html.LabelFor(x => x.BlogImage)
-    @Html.TextAreaFor(x => x.BlogImage, new { @class = "form-control", @rows = 10 })
+    @Html.TextBoxFor(x => x.BlogImage, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Aciklama)
+    @Html.TextAreaFor(x => x.Aciklama, new { @class = "form-control", @rows = 10 })
 
     <button class="btn btn-primary my-4">Blog Ekle</button>
 
