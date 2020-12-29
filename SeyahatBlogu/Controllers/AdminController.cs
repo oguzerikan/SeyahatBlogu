@@ -16,5 +16,17 @@ namespace SeyahatBlogu.Controllers
             var degerler = c.Blogs.ToList();
             return View(degerler);
         }
+
+        [HttpGet]
+        public ActionResult YeniBlog()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult YeniBlog(Blog p)
+        {
+            return View();
+        }
     }
 }
