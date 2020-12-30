@@ -30,5 +30,19 @@ namespace SeyahatBlogu.Controllers
             c.SaveChanges();
             return RedirectToAction("Index");
         }
+
+        public ActionResult BlogSil(int id)
+        {
+            var deletedblog = c.Blogs.Find(id);
+            c.Blogs.Remove(deletedblog);
+            c.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult BlogGetir(int id)
+        {
+            var bl = c.Blogs.Find(id);
+            return View("BlogGetir", bl);
+        }
     }
 }
