@@ -300,6 +300,7 @@
     <Content Include="web\images\pic9.jpg" />
     <Content Include="web\images\seyahat_uygulamalari.jpg" />
     <Content Include="web\images\turkiyede_yasanacak_on_sey.jpg" />
+    <Content Include="web\images\ucuslarda_kovid_asisi.jpg" />
     <Content Include="web\images\ucus_icin_korona_asisi.jpg" />
     <Content Include="web\index.html" />
     <Content Include="web\js\jquery.min.js" />

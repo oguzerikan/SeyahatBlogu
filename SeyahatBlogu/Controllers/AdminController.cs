@@ -44,5 +44,16 @@ namespace SeyahatBlogu.Controllers
             var bl = c.Blogs.Find(id);
             return View("BlogGetir", bl);
         }
+
+        public ActionResult BlogGuncelle(Blog b)
+        {
+            var blg = c.Blogs.Find(b.ID);
+            blg.Baslik = b.Baslik;
+            blg.Tarih = b.Tarih;
+            blg.Aciklama = b.Aciklama;
+            blg.BlogImage = b.BlogImage;
+            c.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
