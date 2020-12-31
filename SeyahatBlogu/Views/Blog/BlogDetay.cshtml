@@ -53,7 +53,7 @@
 
             @foreach (var item in Model.Deger2)
             {
-                <ul class="comment-list">                    
+                <ul class="comment-list">
                     <li>
                         <img src="/web2/images/avatar.png" class="img-responsive" alt="" style="float:left;">
                         <div class="desc">
@@ -64,15 +64,8 @@
                 </ul>
             }
 
-            <div class="content-form">
-                <h3>Yorumunuzu Bırakın</h3>
-                <form>
-                    <input type="text" placeholder="Kullanıcı Adı" required />
-                    <input type="text" placeholder="Email" required />
-                    <textarea placeholder="Mesaj"></textarea>
-                    <input type="submit" value="Gönder" />
-                </form>
-            </div>
+            @Html.Action("YorumYap", "Blog")            
+
         </div>
 
         @*<div class="col-md-4 side-content">

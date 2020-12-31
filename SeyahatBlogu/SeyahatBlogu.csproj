@@ -132,6 +132,7 @@
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -261,6 +262,10 @@
     <Content Include="web2\js\move-top.js" />
     <Content Include="web2\single.html" />
     <Content Include="web2\w3layouts-License.txt" />
+    <Content Include="web3\css\style.css" />
+    <Content Include="web3\images\b4.jpg" />
+    <Content Include="web3\index.html" />
+    <Content Include="web3\w3layouts-License.txt" />
     <Content Include="web\about.html" />
     <Content Include="web\contact.html" />
     <Content Include="web\css\slider.css" />
@@ -369,6 +374,12 @@
     <Content Include="Views\Admin\Index.cshtml" />
     <Content Include="Views\Admin\YeniBlog.cshtml" />
     <Content Include="Views\Admin\BlogGetir.cshtml" />
+    <Content Include="Views\Blog\YorumYap.cshtml" />
+    <Content Include="Views\Admin\YorumListesi.cshtml" />
+    <Content Include="Views\Admin\YorumGetir.cshtml" />
+    <Content Include="web3\fonts\Asap-Regular.ttf" />
+    <Content Include="web3\fonts\Audiowide-Regular.ttf" />
+    <Content Include="Views\Login\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -55,5 +55,35 @@ namespace SeyahatBlogu.Controllers
             c.SaveChanges();
             return RedirectToAction("Index");
         }
+        
+        public ActionResult YorumListesi()
+        {
+            var yorumlar = c.Yorumlars.ToList();
+            return View(yorumlar);
+        }
+
+        public ActionResult YorumSil(int id)
+        {
+            var yorumsil = c.Yorumlars.Find(id);
+            c.Yorumlars.Remove(yorumsil);
+            c.SaveChanges();
+            return RedirectToAction("YorumListesi");
+        }
+
+        public ActionResult YorumGetir(int id)
+        {
+            var yorum = c.Yorumlars.Find(id);
+            return View("YorumGetir", yorum);
+        }
+
+        public ActionResult YorumGuncelle(Yorumlar y)
+        {
+            var yrm = c.Yorumlars.Find(y.ID);
+            yrm.KullaniciAdi = y.KullaniciAdi;
+            yrm.Mail = y.Mail;
+            yrm.Yorum = y.Yorum;  
+            c.SaveChanges();
+            return RedirectToAction("YorumListesi");
+        }
     }
 }

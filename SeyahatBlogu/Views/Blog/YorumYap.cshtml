@@ -1,0 +1,14 @@
+﻿@using SeyahatBlogu.Models.Siniflar
+@model Yorumlar
+
+<div class="content-form">
+    <h3>Yorumunuzu Bırakın</h3>
+    <form method="post">
+        <input type="text" placeholder="ID" name="Blogid" value="@ViewBag.deger" required  />
+        <input type="text" placeholder="Kullanıcı Adı" name="KullaniciAdi" required />
+        <input type="text" placeholder="Email" name="Mail" required />
+        <textarea placeholder="Mesaj" name="Yorum"></textarea>
+        <input type="submit" value="Gönder" />
+    </form>
+</div>
+
