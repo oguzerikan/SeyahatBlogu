@@ -31,11 +31,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
         <div class="design-w3l">
             <div class="mail-form-agile">
-                <form action="#" method="post">
-                    <input type="text" name="name" placeholder="Kullanıcı Adı  ya da  E-mail..." required="" />
-                    <input type="password" name="password" class="padding" placeholder="Parola" required="" />
+                @using (Html.BeginForm("Index", "Login", FormMethod.Post))
+                        {
+                    //Kullanıcı Adları: user1 ve user2
+                    <input type="text" name="Kullanici" placeholder="Kullanıcı Adı  ya da  E-mail..." required="" />
+
+                    //Şifre: user1_123, user2_123
+                    <input type = "password" name = "Sifre" class="padding" placeholder="Parola" required="" />
+
                     <input type="submit" value="Giriş">
-                </form>
+
+                };
             </div>
             <div class="clear"> </div>
         </div>

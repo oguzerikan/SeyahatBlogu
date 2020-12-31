@@ -7,11 +7,12 @@ using SeyahatBlogu.Models.Siniflar;
 
 namespace SeyahatBlogu.Controllers
 {
+    [Authorize]
     public class AdminController : Controller
     {
         // GET: Admin
         Context c = new Context();
-        [Authorize]
+        
         public ActionResult Index()
         {
             var degerler = c.Blogs.ToList();
